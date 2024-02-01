@@ -6,7 +6,7 @@ import { motion } from 'framer-motion'
 
 function Home2() {
   return (
-    <div className='h-screen w-full home max-[1366px]:px-[15%] min-[1920px]:px-[10%] flex flex-col justify-end overflow-hidden'>
+    <div className='h-screen w-full home  max-[1366px]:px-[15%] min-[1920px]:px-[10%] flex flex-col justify-end overflow-hidden'>
         
         <div className='grid grid-cols-12 w-full h-fit relative'>
             <div className='col-span-5 h-full flex flex-col justify-end'>
@@ -35,14 +35,20 @@ function Home2() {
                         transition={{ delay: 2, duration: 0.75 }}>BRAND</motion.p>
                 </div>
                 <div className='h-full flex flex-col justify-center'>
-                    <p className='text-[3vh] text-white w-[90%]'>
+                    <motion.p
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 2.75, duration: 0.75 }} className='text-[3vh] text-white w-[90%]'>
                         Soluciones en comunicación gráfica y gestión de marca para
                         procesos de etiquetado.
-                    </p>
+                    </motion.p>
                 </div>
                 <div className='h-full pt-[10%] flex flex-col justify-start !text-[12px]'>
 
-                    <button className='bg-white  rounded-full px-[2em] py-[5px] text-[#F7063E] w-fit text-[2.5vh] min-[3840px]:text-[3vh]  '>Get started</button>
+                    <motion.button
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 3.5, duration: 0.5 }} className='bg-white  rounded-full px-[2em] py-[5px] text-[#F7063E] w-fit text-[2.5vh] min-[3840px]:text-[3vh]  '>Get started</motion.button>
                 </div>
             </div>
             <div className='col-span-2 '></div>

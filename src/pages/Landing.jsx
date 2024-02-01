@@ -64,7 +64,8 @@ function Landing() {
 
   return (
     <VisibilityContext.Provider value={{ isVisible, setIsVisible, menuFlip, popupVisible, setPopupVisible, popup, setPopup, scrollPos, setScrollPos }}>
-      <div className='w-full h-auto'>
+      <Nav/>
+      <div className='w-full h-auto sticky top-0'>
           <Home2 />
           <div className='h-screen bg-black'></div>
       </div>
